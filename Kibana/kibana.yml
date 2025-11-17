@@ -1,0 +1,18 @@
+logging:
+  appenders:
+    file:
+      type: file
+      fileName: /var/log/kibana/kibana.log
+      layout:
+        type: json
+  root:
+    appenders:
+      - default
+      - file
+
+# This section was automatically generated during setup.
+elasticsearch.hosts: ['https://192.168.83.131:9200']
+elasticsearch.serviceAccountToken: AAEAAWVsYXN0aWMva2liYW5hL2Vucm9sbC1wcm9jZXNzLXRva2VuLTE3MzIwMDQyNzAwMzY6MG4ySUg5TnNUSVM1dU5EN2JJdEh0Zw
+elasticsearch.ssl.certificateAuthorities: [/var/lib/kibana/ca_1732004271135.crt]
+xpack.fleet.outputs: [{id: fleet-default-output, name: default, is_default: true, is_default_monitoring: true, type: elasticsearch, hosts: ['https://192.168.83.131:9200'], ca_trusted_fingerprint: b1bc08deb719983afac8671355d0f00bab90c168f340ede4df3ccfeffa19ce43}]
+
